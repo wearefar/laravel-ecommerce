@@ -1,0 +1,38 @@
+{
+    "name": "wearefar/laravel-ecommerce",
+    "description": "A Laravel package to build a simple ecommerce",
+    "homepage": "https://github.com/wearefar/laravel-ecommerce",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Victor Guerrero",
+            "email": "victor@wearefar.com",
+            "homepage": "https://vguerrerobosch.com"
+        }
+    ],
+    "require": {
+        "php" : "^7.4|^8.0",
+        "livewire/livewire": "^2.5",
+        "stripe/stripe-php": "^7.93",
+        "symfony/intl": "^5.3"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "WeAreFar\\Ecommerce\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WeAreFar\\Ecommerce\\EcommerceServiceProvider"
+            ]
+        }
+    }
+}
