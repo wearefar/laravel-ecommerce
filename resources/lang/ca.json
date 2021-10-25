@@ -57,5 +57,9 @@
     "New order": "Nova comanda",
     "Hello!": "Hola!",
     "You received a new order from :name for :total. Please remember to change the status of the order sent when you have delivered it to the courier service.": "Heu rebut una nova comanda de :name per :total. Recordeu canviar l’estat de la comanda a enviada un cop lliurada al servei de missatgeria.",
-    "Regards": "Salutacions"
+    "Regards": "Salutacions",
+
+    "Order :code shipped": "Comanda :code enviada",
+    "Your order :code has been shipped. Below you will find the shipping information.": "La teva comanda amb codi :code ha estat enviada. A continuació trobaràs tota la infomació d'enviament.",
+    "Tracking number": "Codi de seguiment"
 }

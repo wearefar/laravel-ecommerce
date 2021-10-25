@@ -57,5 +57,9 @@
     "New order": "Nuevo pedido",
     "Hello!": "Hola!",
     "You received a new order from :name for :total. Please remember to change the status of the order sent when you have delivered it to the courier service.": "Has recibido un nuevo pedido de :name por :total. Recuerda cambiar el estado del pedido a enviado una vez entregado al servicio de mensajería.",
-    "Regards": "Saludos"
+    "Regards": "Saludos",
+
+    "Order :code shipped": "Pedido :code enviado",
+    "Your order :code has been shipped. Below you will find the shipping information.": "Tu pedido con código :code ha sido enviado. A continuación encontrarás todos los detalles del envío.",
+    "Tracking number": "Código de seguimiento"
 }

@@ -17,6 +17,7 @@ use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\ActionRequest;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Symfony\Component\Intl\Countries;
+use WeAreFar\Ecommerce\Nova\Actions\MarkAsShipped;
 use WeAreFar\Ecommerce\Nova\Resource;
 
 class Order extends Resource
@@ -181,13 +182,13 @@ class Order extends Resource
     public function actions(Request $request)
     {
         return [
-            // (new MarkAsShipped)->canSee(function ($request) {
-            //     if ($request instanceof ActionRequest) {
-            //         return true;
-            //     }
+            (new MarkAsShipped)->canSee(function ($request) {
+                if ($request instanceof ActionRequest) {
+                    return true;
+                }
 
-            //     return $this->resource->isReadyForShipping();
-            // })->showOnTableRow(),
+                return $this->resource->isReadyForShipping();
+            })->showOnTableRow(),
         ];
     }
 }

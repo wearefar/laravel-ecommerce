@@ -106,4 +106,9 @@ class Order extends Model
     {
         return $this->items->find($item);
     }
+
+    public function isReadyForShipping()
+    {
+        return $this->status == 'succeeded';
+    }
 }

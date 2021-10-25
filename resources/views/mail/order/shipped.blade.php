@@ -14,10 +14,10 @@ $address = $order->shippingAddress;
 
 @component('mail::panel')
 **@lang('Shipping Address')**<br>
-@include('ecommmerce::mail.order._address')
+@include('ecommerce::mail.order._address')
 @endcomponent
 
-@include ('ecommerce:mail.order._table')
+@include ('ecommerce::mail.order._table')
 
 @lang('Thanks'),<br>
 {{ config('app.name') }}
