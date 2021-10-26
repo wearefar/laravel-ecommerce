@@ -7,10 +7,11 @@
 $address = $order->shippingAddress;
 @endphp
 
-@component('mail::panel')
-@lang('Tracking number'): **{{ $order->tracking_number }}**
-@endcomponent
-
+@if($order->tracking_number)
+  @component('mail::panel')
+  @lang('Tracking number'): **{{ $order->tracking_number }}**
+  @endcomponent
+@endif
 
 @component('mail::panel')
 **@lang('Shipping Address')**<br>

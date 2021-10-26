@@ -42,7 +42,7 @@ class MarkAsShipped extends Action
     public function fields()
     {
         return [
-            Text::make('Tracking number')->rules('required'),
+            Text::make('Tracking number'),
         ];
     }
 }
