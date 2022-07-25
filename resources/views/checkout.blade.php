@@ -48,7 +48,7 @@
       <div class="max-w-lg p-6 text-center text-sm sm:text-base">
         <h1 class="font-serif text-3xl sm:text-4xl mb-4">@lang('Thank you for your order')</h1>
         <p class="mb-4">@lang("We just sent you an email with your order details. Please be aware that the email might take a while to hit your inbox in some cases. If you don't receive the email, please make sure it didn't end up in spam folder.")</p>
-        <p>@lang("If you need further assistance please contact us at :email and we'll gladly help you.", ['email' => sprintf('<a href="mailto:%1$s" class="underline">%1$s</a>', config('ecommerce.admin_email'))])</p>
+        <p>@lang("If you need further assistance please contact us at :email and we'll gladly help you.", ['email' => sprintf('<a href="mailto:%1$s" class="underline">%1$s</a>', config('ecommerce.admin_email')[0])])</p>
       </div>
     </div>
   </div>

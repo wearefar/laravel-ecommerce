@@ -57,7 +57,7 @@ return [
         'tolerance' => env('STRIPE_WEBHOOK_TOLERANCE', 300),
     ],
 
-    'admin_email' => 'john@example.com',
+    'admin_email' => explode(',', env('ADMIN_EMAIL')),
 
     // TODO: This ain't working... we need this to be translatable
     // Should take another aproach here I guess...
