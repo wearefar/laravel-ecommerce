@@ -9,6 +9,7 @@ use Illuminate\Support\Collection;
 use Laravel\Nova\Actions\Action;
 use Laravel\Nova\Fields\ActionFields;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Http\Requests\NovaRequest;
 use WeAreFar\Ecommerce\Events\OrderShipped;
 
 class MarkAsShipped extends Action
@@ -39,7 +40,7 @@ class MarkAsShipped extends Action
      *
      * @return array
      */
-    public function fields()
+    public function fields(NovaRequest $request)
     {
         return [
             Text::make('Tracking number'),

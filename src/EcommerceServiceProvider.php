@@ -72,6 +72,7 @@ class EcommerceServiceProvider extends ServiceProvider
                     __DIR__.'/../database/migrations/create_orders_table.php.stub' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_orders_table.php'),
                     __DIR__.'/../database/migrations/create_addresses_table.php.stub' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_addresses_table.php'),
                     __DIR__.'/../database/migrations/create_customers_table.php.stub' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_customers_table.php'),
+                    __DIR__.'/../database/migrations/create_payments_table.php.stub' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_payments_table.php'),
                 ], 'migrations');
             }
 
