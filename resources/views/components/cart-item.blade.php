@@ -1,5 +1,5 @@
 <article class="border-t border-gray-200 py-4 flex items-center justify-between">
-  <div class="w-20 h-20 md:w-24 md:h-24 mr-2">
+  <div class="w-20 h-20 md:w-24 md:h-24 mr-2 flex-shrink-0">
     <img src="{{ $item->thumbnail }}" alt="" class="w-full h-full object-contain">
   </div>
   <div class="flex-grow mr-4">

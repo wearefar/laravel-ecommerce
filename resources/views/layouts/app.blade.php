@@ -9,11 +9,12 @@
     <link rel="icon" href="{{ asset("images/favicon-16.png") }}" type="image/png" sizes="16x16">
     <link rel="icon" href="{{ asset("images/favicon-32.png") }}" type="image/png" sizes="32x32">
 
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet" type="text/css">
+    @vite([
+        'resources/css/app.css',
+        'resources/js/app.js'
+    ])
 
     @livewireStyles
-
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
     <style>[x-cloak] { display:none }</style>
 
@@ -21,7 +22,7 @@
 
     {{-- TODO: fathom script --}}
     @production
-      <script src="https://sloth.vguerrerobosch.com/script.js" data-site="EFIXZBWP" defer></script>
+      <script src="https://cdn.usefathom.com/script.js" data-site="ABCDEFG" defer></script>
     @endproduction
   </head>
   <body class="font-sans font-normal text-base bg-gray-200 antialiased">

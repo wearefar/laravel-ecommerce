@@ -8,10 +8,10 @@ class CheckoutController extends Controller
 {
     public function __invoke()
     {
-        $order = Order::with('items.media')->find(session('cart'));
+        $order = Order::with('items')->find(session('cart'));
 
         if (is_null($order) || $order->items->isEmpty()) {
-            return redirect(route_l10n('home'));
+            return redirect()->route('home');
         }
 
         return view('ecommerce::checkout', compact('order'));

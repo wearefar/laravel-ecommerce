@@ -32,6 +32,42 @@ return [
 ];
 ```
 
+Add the path to the template files in your `tailwind.config.js` file.
+
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './vendor/wearefar/ecommerce/resources/views/**/*.blade.php',
+    ...
+  ],
+  ...
+}
+```
+
+You can customize the views by exporting them to your `resources/views/vendor` directory using the `vendor:publish` command:
+
+```bash
+php artisan vendor:publish --provider="WeAreFar\Ecommerce\EcommerceServiceProvider" --tag="views"
+```
+
+### Preparing your model
+
+To connect the shop with a model, the model must implement the following interface and trait:
+
+```php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use WeAreFar\Ecommerce\HasOrders;
+use WeAreFar\Ecommerce\OrderItem;
+
+class Product extends Model implements OrderItem
+{
+    use HasOrders;
+}
+```
+
 ## Usage
 
 ```php

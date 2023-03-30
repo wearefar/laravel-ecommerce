@@ -7,7 +7,7 @@
   <x-ecommerce::slide-over>
     <div class="flex flex-col justify-between h-full">
       <div>
-        <h1 class="font-display text-4xl md:text-5xl text-center leading-tight">@lang('Your Cart')</h1>
+        <h1 class="font-serif text-4xl md:text-5xl text-center leading-tight">@lang('Your Cart')</h1>
         <p class="text-sm text-center mb-4 md:mb-10">
           @if($cart->items->isEmpty())
             @lang('is currently empty')
@@ -25,7 +25,7 @@
             <div class="text-sm mb-6">
               @lang("Looks like there's nothing in your cart.")
             </div>
-            <a href="{{ route_l10n('catalog') }}" class="block px-10 py-3 font-semibold text-sm border border-black hover:bg-black hover:text-white transition-colors duration-300">@lang('Start Shopping')</a>
+            <a href="{{ route(config('ecommerce.shop_route', 'shop')) }}" class="block px-10 py-3 font-semibold text-sm border border-black hover:bg-black hover:text-white transition-colors duration-300">@lang('Start Shopping')</a>
           </div>
         </div>
       </div>
@@ -53,12 +53,12 @@
         </div>
         {{-- TODO: route checkout l10n --}}
         <a
-          href="{{ route_l10n('checkout') }}"
-          class="block w-full mb-2 py-2 pt-3 bg-blue font-display text-white text-lg text-center leading-none hover:bg-gray-900 transition-colors duration-300"
+          href="{{ route('checkout') }}"
+          class="block w-full py-3 bg-black text-lg text-white text-center leading-none"
         >@lang('Checkout')</a>
         <button
           x-on:click="open = false"
-          class="mx-auto block text-sm underline"
+          class="block mx-auto mt-2 text-sm underline"
         >@lang('Continue Shopping')</button>
       </div>
 

@@ -44,4 +44,9 @@ trait HasOrders
     {
         return config('ecommerce.low_stock_threshold', 10);
     }
+
+    public function getThumbnailAttribute(): ?string
+    {
+        return $this->thumbnail_url;
+    }
 }
