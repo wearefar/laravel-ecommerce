@@ -56,7 +56,7 @@ class StripeWebhookController extends Controller
             'status' => $paymentIntent->status,
             'card_brand' => $paymentIntent->charges->data[0]->payment_method_details->card->brand ?? null,
             'card_last_four' => $paymentIntent->charges->data[0]->payment_method_details->card->last4 ?? null,
-            'stripe_error_message' => $paymentIntent->charges->data[0]->failure_message,
+            'stripe_error_message' => $paymentIntent->charges->data[0]->failure_message ?? null,
         ]);
 
         if ($payment->order->status == 'succeeded') {

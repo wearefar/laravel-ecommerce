@@ -68,6 +68,14 @@ class Product extends Model implements OrderItem
 }
 ```
 
+### Exclude webook endpoint from CSRF
+
+```php
+protected $except = [
+    'stripe/webhook',
+];
+```
+
 ## Usage
 
 ```php

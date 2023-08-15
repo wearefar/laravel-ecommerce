@@ -5,6 +5,7 @@ namespace WeAreFar\Ecommerce\Http\Middleware;
 use Closure;
 use Stripe\Exception\SignatureVerificationException;
 use Stripe\WebhookSignature;
+use Symfony\Component\HttpFoundation\Response;
 
 class VerifyStripeWebhookSignature
 {
@@ -21,11 +22,11 @@ class VerifyStripeWebhookSignature
             WebhookSignature::verifyHeader(
                 $request->getContent(),
                 $request->header('Stripe-Signature'),
-                config('services.stripe.webhook.secret'),
-                config('services.stripe.webhook.tolerance')
+                config('ecommerce.webhook.secret'),
+                config('ecommerce.webhook.tolerance')
             );
         } catch (SignatureVerificationException $exception) {
-            abort(403);
+            return new Response('Webhook signature verification failed', 403);
         }
 
         return $next($request);
